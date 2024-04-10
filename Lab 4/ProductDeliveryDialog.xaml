@@ -1,0 +1,27 @@
+﻿<Window x:Class="Lab_4.ProductDeliveryDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Product Delivery" Height="300" Width="400">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Select Product Type:" Margin="5"/>
+            <ComboBox Name="ProductTypeComboBox" SelectionChanged="ProductTypeComboBox_SelectionChanged" Margin="5">
+                <ComboBoxItem Content="Book"/>
+                <ComboBoxItem Content="Game"/>
+                <ComboBoxItem Content="Movie"/>
+            </ComboBox>
+
+            <TextBlock Text="Select Product to Deliver:" Margin="5"/>
+            <ListBox Name="ProductListBox" Margin="5" Height="100"/>
+
+            <TextBlock Text="Delivery Quantity:" Margin="5"/>
+            <TextBox Name="DeliveryQuantityTextBox" Margin="5"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Button Content="Add to Delivery" Width="120" Margin="5" Click="AddButton_Click"/>
+                <Button Content="Deliver" Width="120" Margin="5" Click="DeliverButton_Click"/>
+                <Button Content="Cancel" Width="120" Margin="5" Click="CancelButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
